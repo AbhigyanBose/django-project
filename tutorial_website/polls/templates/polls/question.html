@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question Index</title>
+</head>
+<body>
+    <ul>
+        {% for choice in choices %}
+        <li><a href="{% url 'choice' choice.id %}">{{ choice.choice_text }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

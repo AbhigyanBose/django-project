@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question Index</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><h4>Questions:</h4></li>
+            {% for q in items %}
+                <li><a href="{% url 'question' q.id %}">{{ q.question_text }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
